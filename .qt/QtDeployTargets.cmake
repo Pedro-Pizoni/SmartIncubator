@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_smartincubator_FILE /home/pedro/QtProjects/SmartIncubatorOF/smartincubator)
+set(__QT_DEPLOY_TARGET_smartincubator_TYPE EXECUTABLE)

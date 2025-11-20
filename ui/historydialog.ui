@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistoryDialog</class>
+ <widget class="QDialog" name="HistoryDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Histórico de Dados</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px; font-weight: bold; color: #2c3e50;</string>
+     </property>
+     <property name="text">
+      <string>📜 Histórico de Temperatura e Umidade</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="historyTextEdit">
+     <property name="styleSheet">
+      <string notr="true">QTextEdit {
+    background-color: #1e272e;      /* Fundo escuro */
+    color: #ecf0f1;                 /* Texto branco suave */
+    border: 2px solid #16a085;      /* Borda verde */
+    border-radius: 10px;            /* Cantos arredondados */
+    padding: 8px;                   /* Espaçamento interno */
+    font: 12pt &quot;Segoe UI&quot;;          /* Fonte moderna e legível */
+}
+</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="clearButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #c0392b;
+    color: white;
+    font: bold 12pt &quot;Segoe UI&quot;;
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+QPushButton:hover {
+    background-color: #e74c3c;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>🗑️ Limpar Histórico</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #3498db; color: white; padding: 6px; border-radius: 5px;</string>
+       </property>
+       <property name="text">
+        <string>Fechar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>597</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ℹ️ Sobre o Smart Incubator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>
+       &lt;h2&gt;🌡️ Smart Incubator&lt;/h2&gt;
+       &lt;p&gt;&lt;b&gt;Pedro Pizoni&lt;/b&gt;&lt;br&gt;Engenharia da Computação — 2025&lt;/p&gt;
+       &lt;p&gt;Sistema de controle inteligente de temperatura e umidade, com interface Qt e Arduino.&lt;/p&gt;
+      </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::TextFormat::RichText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="youtubeButton">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Abrir repositório no GitHub</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+             background-color: transparent;
+             border: none;
+         }
+         QPushButton:hover {
+             transform: scale(1.1);
+         }
+        </string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/free-github-logo-icon-svg-download-png-47401.webp</normaloff>:/free-github-logo-icon-svg-download-png-47401.webp</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="githubButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Assistir ao vídeo no YouTube</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+             background-color: transparent;
+             border: none;
+         }
+         QPushButton:hover {
+             transform: scale(1.1);
+         }
+        </string>
+       </property>
+       <property name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/432560.webp</normaloff>:/432560.webp</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="closeButton">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       QPushButton {
+           background-color: #e53935;
+           color: white;
+           font: bold 12pt &quot;Segoe UI&quot;;
+           border-radius: 8px;
+           padding: 6px;
+       }
+       QPushButton:hover {
+           background-color: #c62828;
+       }
+      </string>
+     </property>
+     <property name="text">
+      <string>❌ Fechar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

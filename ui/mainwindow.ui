@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Smart Incubator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="statusLayout">
+      <item>
+       <widget class="QLabel" name="connectionStatusLabel">
+        <property name="styleSheet">
+         <string notr="true">color: red; font: bold 14pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>🔴 Desconectado</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="sensorLayout">
+      <item>
+       <widget class="QLabel" name="tempLabel">
+        <property name="styleSheet">
+         <string notr="true">font: bold 20pt &quot;Segoe UI&quot;; color: #E65100;</string>
+        </property>
+        <property name="text">
+         <string>🌡️ Temperatura: -- °C</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="humLabel">
+        <property name="styleSheet">
+         <string notr="true">font: bold 20pt &quot;Segoe UI&quot;; color: #0277BD;</string>
+        </property>
+        <property name="text">
+         <string>💧 Umidade: -- %</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="tempControlLayout">
+      <item>
+       <widget class="QLabel" name="targetTempLabel">
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>🌞 Temperatura alvo:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="targetTempSpinBox">
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="minimum">
+         <double>20.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>45.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="value">
+         <double>37.500000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="applyTempButton">
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+ background-color: #2196F3;
+ color: white;
+ font: bold 14pt &quot;Segoe UI&quot;;
+ border-radius: 10px;
+}
+QPushButton:hover {
+ background-color: #1976D2;
+}
+         </string>
+        </property>
+        <property name="text">
+         <string>✅ Aplicar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout">
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #8E44AD; color: white; font: bold 12pt &quot;Segoe UI&quot;; border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>💾 Salvar Dados</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="historyButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #FF9800; color: white; font: bold 12pt &quot;Segoe UI&quot;; border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>📜 Histórico</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="aboutButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #9C27B0; color: white; font: bold 12pt &quot;Segoe UI&quot;; border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>ℹ️ Sobre</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="statusLabel">
+      <property name="styleSheet">
+       <string notr="true">font: bold 12pt &quot;Segoe UI&quot;; color: #2C3E50;</string>
+      </property>
+      <property name="text">
+       <string>🟡 Aguardando ação...</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
