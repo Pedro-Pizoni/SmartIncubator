@@ -39,8 +39,7 @@ Responsável por:
 Enviar dados no formato:
 
  `TEMP:xx.x;HUM:yy.y`
-
-*   
+ 
 * Receber temperatura alvo (controle futuro)
 
 ### **Aplicação Qt (Front-end)**
