@@ -1,9 +1,0 @@
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/smartincubator.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/edit_cache.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/rebuild_cache.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/list_install_components.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/install.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/install/local.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/install/strip.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/smartincubator_autogen_timestamp_deps.dir
-/home/pedro/QtProjects/SmartIncubatorOF/CMakeFiles/smartincubator_autogen.dir
