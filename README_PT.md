@@ -111,4 +111,12 @@ Instalação no Linux:
 **Pedro Augusto Pizoni Freitas (202379)**  
  Estudante de Engenharia da Computação – UPF  
  GitHub: [https://github.com/Pedro-Pizoni](https://github.com/Pedro-Pizoni)
+ ---
 
+##**Licença**
+
+**Este projeto está licenciado sob a Licença MIT.**
+Você pode usar, modificar, distribuir e adaptar este software livremente para fins acadêmicos, pessoais ou comerciais.
+O texto completo da licença pode ser encontrado no arquivo:
+
+`./LICENSE`
