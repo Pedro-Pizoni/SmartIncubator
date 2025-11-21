@@ -51,10 +51,17 @@ void IncubatorController::processData(const QString &data)
     serialPort->write(comando.toUtf8());
     serialPort->flush();
 
-    qDebug() << "TEMP:" << tempAtual
-             << "| ERRO:" << erro
-             << "| LampOn:" << lampOn
-             << "| Brilho:" << brilhoFinal;
+
+    // Debug log for monitoring the control loop behavior (temperature, error, lamp state, PWM).
+    // Useful during calibration, testing, and troubleshooting.
+    // Keep commented in production to avoid console clutter. Uncomment when detailed runtime
+    // diagnostics are needed.
+
+
+    // qDebug() << "TEMP:" << tempAtual
+    //          << "| ERRO:" << erro
+    //          << "| LampOn:" << lampOn
+    //          << "| Brilho:" << brilhoFinal;
 }
 
 
