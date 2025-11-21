@@ -113,7 +113,7 @@ Instalação no Linux:
  GitHub: [https://github.com/Pedro-Pizoni](https://github.com/Pedro-Pizoni)
  ---
 
-##**Licença**
+## **Licença**
 
 **Este projeto está licenciado sob a Licença MIT.**
 Você pode usar, modificar, distribuir e adaptar este software livremente para fins acadêmicos, pessoais ou comerciais.
