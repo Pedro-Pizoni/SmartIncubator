@@ -14,11 +14,11 @@ AboutDialog::AboutDialog(QWidget *parent)
         "Engenharia da Computação — 2025</p>"
         "<p>Controle inteligente de temperatura e umidade com Arduino e Qt.</p>"
         );
-    connect(ui->youtubeButton, &QPushButton::clicked, this, []() {
+    connect(ui->githubButton_2, &QPushButton::clicked, this, []() {
         QDesktopServices::openUrl(QUrl("https://github.com/Pedro-Pizoni"));
     });
 
-    connect(ui->githubButton_2, &QPushButton::clicked, this, []() {
+    connect(ui->youtubeButton, &QPushButton::clicked, this, []() {
         QDesktopServices::openUrl(QUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUTaSBnb25uYSBnaXZlIHlvdSB1cA%3D%3D"));
     });
     connect(ui->closeButton, &QPushButton::clicked, this, &QDialog::accept);
