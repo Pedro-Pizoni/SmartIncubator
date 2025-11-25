@@ -18,7 +18,7 @@ public:
     void saveData(const QString &data);
     QStringList readAllData();
     void clearData();
-    QList<QString> loadAllData() const;
+
 
 
 private:
