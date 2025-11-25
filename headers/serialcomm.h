@@ -19,10 +19,7 @@ public:
     void closePort();
     void sendData(const QString &data);
     bool isOpen() const;
-
-    QByteArray readAllBytes();
     QSerialPort* getSerial() const { return serial; }
-
     QSerialPort *serial;
     QByteArray buffer;
 

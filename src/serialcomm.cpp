@@ -70,13 +70,6 @@ bool SerialComm::isOpen() const
     return serial->isOpen();
 }
 
-QByteArray SerialComm::readAllBytes()
-{
-    if (serial->isOpen())
-        return serial->readAll();
-
-    return QByteArray();
-}
 
 void SerialComm::readData()
 {
