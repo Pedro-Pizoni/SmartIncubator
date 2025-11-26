@@ -105,8 +105,6 @@ void MainWindow::on_saveButton_clicked()
     if (fileName.isEmpty())
         return;
 
-    // MODIFICAÇÃO 2: Delega a exportação para o DataStorage
-    // O código da MainWindow fica limpo, sem mexer com QFile.
     if (dataStorage->exportData(fileName)) {
         QMessageBox::information(this,
                                  "Histórico salvo",
