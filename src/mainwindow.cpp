@@ -35,31 +35,19 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::autoConnectSerial() // auto conect
+
+void MainWindow::autoConnectSerial()
 {
-    QString portName;
-
-    QDir devDir("/dev");
-    QStringList ports = devDir.entryList(
-        {"ttyUSB*", "ttyACM*"},
-        QDir::System | QDir::Readable
-        );
-
-    if (!ports.isEmpty())
-        portName = "/dev/" + ports.first();
-
-    if (portName.isEmpty()) {
-        ui->connectionStatusLabel->setText("❌ Nenhum Arduino encontrado");
-        return;
-    }
-
-    if (serialcomm->openPort(portName)) {
+    bool sucesso = serialcomm->autoConnect();
+    if (sucesso) {
         ui->connectionStatusLabel->setText("🟡 Porta aberta. Aguardando dados...");
-        qDebug() << "📡 Porta aberta em:" << portName;
+        qDebug() << "📡 Conexão automática realizada com sucesso!";
     } else {
-        ui->connectionStatusLabel->setText("❌ Falha ao abrir porta");
+        ui->connectionStatusLabel->setText("❌ Nenhuma porta encontrada");
+        qDebug() << "❌ Falha na conexão automática.";
     }
 }
+
 void MainWindow::updateDisplay(const QString &data)
 {
     if (!data.startsWith("TEMP:"))
