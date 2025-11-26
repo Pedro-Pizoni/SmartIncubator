@@ -54,7 +54,6 @@ void MainWindow::updateDisplay(const QString &data)
     if (!data.startsWith("TEMP:"))
         return;
 
-    // 2. Parsing (Conversão de Texto para Número)
     QStringList parts = data.split(';');
     if (parts.size() != 2)
         return;
@@ -66,15 +65,9 @@ void MainWindow::updateDisplay(const QString &data)
 
     if (!ok1 || !ok2)
         return;
-
-    // 3. Atualiza Interface
     ui->tempLabel->setText(QString("🌡️ Temperatura: %1 °C").arg(temp, 0, 'f', 1));
     ui->humLabel->setText(QString("💧 Umidade: %1 %").arg(hum, 0, 'f', 1));
-
-    // 4. Salva no Histórico
     dataStorage->saveData(QString("Temp: %1 | Hum: %2").arg(temp).arg(hum));
-
-    // 5. Inicialização Tardia do Controlador
     if (!firstReadingReceived)
     {
         firstReadingReceived = true;
@@ -84,8 +77,6 @@ void MainWindow::updateDisplay(const QString &data)
         ui->connectionStatusLabel->setText("🟢 Arduino em operação!");
         qDebug() << "🔥 Primeiro pacote recebido. Controlador iniciado!";
     }
-
-    // 6. Envia para o Controlador (MODIFICAÇÃO 1: Passa double, não string)
     if (incubatorController)
         incubatorController->processData(temp);
 }
