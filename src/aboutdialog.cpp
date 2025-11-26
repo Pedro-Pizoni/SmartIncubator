@@ -19,7 +19,7 @@ AboutDialog::AboutDialog(QWidget *parent)
     });
 
     connect(ui->youtubeButton, &QPushButton::clicked, this, []() {
-        QDesktopServices::openUrl(QUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUTaSBnb25uYSBnaXZlIHlvdSB1cA%3D%3D"));
+        QDesktopServices::openUrl(QUrl("https://youtu.be/Xd1P1qslgvQ"));
     });
     connect(ui->closeButton, &QPushButton::clicked, this, &QDialog::accept);
 }
