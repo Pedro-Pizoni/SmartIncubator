@@ -14,7 +14,7 @@ class DataStorage : public QObject
 
 public:
     explicit DataStorage(QObject *parent = nullptr);
-
+    bool exportData(const QString &fileName);
     void saveData(const QString &data);
     QStringList readAllData();
     void clearData();

@@ -13,7 +13,7 @@ class IncubatorController : public QObject
 public:
     explicit IncubatorController(QSerialPort *port, QObject *parent = nullptr);
 
-    void processData(const QString &data);
+    void processData(double tempAtual);
     void setTargetTemperature(double target);
 
 private:

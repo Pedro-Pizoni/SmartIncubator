@@ -49,3 +49,28 @@ void DataStorage::clearData()
         qWarning() << "Falha ao limpar o histórico.";
     }
 }
+
+bool DataStorage::exportData(const QString &fileName)
+{
+    QFile file(fileName);
+
+    // Tenta criar/sobrescrever o arquivo escolhido
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        return false; // Deu erro
+    }
+
+    QTextStream out(&file);
+
+    // Reutiliza sua própria função de ler tudo!
+    QStringList registros = readAllData();
+
+    if (registros.isEmpty()) {
+        out << "Nenhum dado registrado ainda.\n";
+    } else {
+        for (const QString &linha : registros)
+            out << linha << "\n";
+    }
+
+    file.close();
+    return true; // Sucesso
+}

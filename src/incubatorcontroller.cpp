@@ -1,31 +1,22 @@
 #include "incubatorcontroller.h"
-#include <QtMath>  // qBound
+#include <QtMath>
 
 IncubatorController::IncubatorController(QSerialPort *port, QObject *parent)
     : QObject(parent), serialPort(port), targetTemperature(37.5)
 {
 }
 
-void IncubatorController::processData(const QString &data)
+void IncubatorController::processData(double tempAtual)
 {
     if (!serialPort || !serialPort->isOpen())
         return;
-
-    if (!data.startsWith("TEMP:"))
-        return;
-
-    QStringList parts = data.split(';');
-    if (parts.size() != 2)
-        return;
-
-    double tempAtual = parts[0].mid(5).toDouble();
-    double hum       = parts[1].mid(4).toDouble();
 
     double erro = targetTemperature - tempAtual;
     double brilhoCalc = 0;
 
     static bool lampOn = false;
     double histerese = 0.3;
+
     if (erro > histerese) {
         lampOn = true;
     } else if (erro < -histerese) {
@@ -36,7 +27,6 @@ void IncubatorController::processData(const QString &data)
         brilhoCalc = 0;
     } else {
         double erroPos = qMax(0.0, erro);
-
         double k = 0.12;
 
         brilhoCalc = 255.0 * (1.0 - exp(-k * erroPos));
@@ -51,19 +41,15 @@ void IncubatorController::processData(const QString &data)
     serialPort->write(comando.toUtf8());
     serialPort->flush();
 
-
     // Debug log for monitoring the control loop behavior (temperature, error, lamp state, PWM).
     // Useful during calibration, testing, and troubleshooting.
     // Keep commented in production to avoid console clutter. Uncomment when detailed runtime
     // diagnostics are needed.
-
-
     // qDebug() << "TEMP:" << tempAtual
     //          << "| ERRO:" << erro
     //          << "| LampOn:" << lampOn
     //          << "| Brilho:" << brilhoFinal;
 }
-
 
 void IncubatorController::setTargetTemperature(double target)
 {
